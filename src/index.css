@@ -1,0 +1,99 @@
+:root {
+  --bg: #f7f7fb;
+  --card: #fff;
+  --accent: #ff5a7a;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: #222;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 900px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.top-row {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.similarity {
+  font-size: 18px;
+  color: #285;
+}
+
+.center-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  min-height: 360px;
+}
+
+.image-container img {
+  max-width: 600px;
+  max-height: 360px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  object-fit: contain;
+}
+
+/* animation overlay */
+.animation-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+  font-size: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+.animation-overlay.visible {
+  font-size: 64px;
+  opacity: 1;
+  transform: translate(-50%,-60%) scale(1.2);
+}
+
+/* buttons */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+}
+.btn {
+  font-size: 28px;
+  width: 72px;
+  height: 72px;
+  margin: 0 8px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.12s;
+}
+.btn:active {
+  transform: scale(0.96);
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.countdown {
+  margin-left: 14px;
+  font-size: 20px;
+  color: #e44;
+}
